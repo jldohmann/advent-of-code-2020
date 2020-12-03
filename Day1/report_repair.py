@@ -14,14 +14,18 @@ for x in rawList:
         n = int(x)
         input.append(n)
 
-"""
+"""""""""""""""
 PART ONE
-"""
+"""""""""""""""
 
 def find_product_pair(lst):
+
+    # get all possible pairs and total them
     sets = set(lst)
     pairs = list(combinations(sets, 2))
     sums = [a + b for (a,b) in pairs]
+    
+    # find the index of the pair that totals to 2020 and multiply
     for val in sums:
         if val == 2020:
             ind = sums.index(val)
@@ -30,14 +34,18 @@ def find_product_pair(lst):
 
 find_product_pair(input)
 
-"""
+"""""""""""""""
 PART TWO
-"""
+"""""""""""""""
 
 def find_product_triple(lst):
+
+    # get all possible triplets and total them
     sets = set(lst)
     trip = list(combinations(sets, 3))
     sums = [a + b + c for (a,b,c) in trip]
+    
+    # find the index of the triplet that totals to 2020 and multiply
     for val in sums:
         if val == 2020:
             ind = sums.index(val)
