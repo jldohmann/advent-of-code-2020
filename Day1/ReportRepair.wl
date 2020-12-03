@@ -2,7 +2,8 @@
 raw = Import[FileNameJoin[{$HomeDirectory, "Downloads", "input.html"}], "HTML"]
 input = ToExpression /@ StringSplit[raw, " "]
 
-(* PART ONE *)
+(******************************************************************************)
+(*   PART ONE   *)
 
 ClearAll[findProductPair]
 findProductPair[l_List] := Module[{pairs, sum, index, product},
@@ -21,7 +22,8 @@ findProductPair[l_List] := Module[{pairs, sum, index, product},
 
 findProductPair[input]
 
-(* PART TWO *)
+(******************************************************************************)
+(*   PART TWO   *)
 
 ClearAll[findProductTriple]
 findProductTriple[l_List] := Module[{trip, sum, index, product},
